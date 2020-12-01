@@ -1,5 +1,16 @@
 import Foundation
 
-let contents = parseIntList(fileName: "input_01")
+let days = [
+    Day01()
+]
 
-let day01Result = twoSumMultiplied(inputs: contents, sumValue: 2020)
+func prettyDay(index: Int) -> String {
+    let adjusted = index + 1
+    return adjusted < 10 ? "0\(adjusted)" : "\(adjusted)"
+}
+
+for i in 0..<days.count {
+    print("==== Day \(prettyDay(index: i)) ====")
+    days[i].run()
+    print()
+}
