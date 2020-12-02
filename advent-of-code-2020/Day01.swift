@@ -1,15 +1,22 @@
+//
+//  Day01.swift
+//  advent-of-code-2020
+//
+//  Created by Dennis McDaid on 12/1/20.
+//
+
 import Foundation
 
-public struct Day01 : Day {
-    public typealias DataType = [Int]
+struct Day01 : Day {
+    typealias DataType = [Int]
     
-    public var fileName: String = "input_01"
+    var fileName: String = "input_01"
     
-    public var data: [Int] {
+    var data: [Int] {
         parseIntList(fileName: fileName)
     }
     
-    public func part01Result(input: [Int]) -> String {
+    func part01Result(input: [Int]) -> String {
         if let result = twoSumMultiplied(inputs: data, sumValue: 2020, alreadySorted: false) {
             return "\(result)"
         } else {
@@ -17,15 +24,12 @@ public struct Day01 : Day {
         }
     }
     
-    public func part02Result(input: [Int]) -> String {
+    func part02Result(input: [Int]) -> String {
         if let result = threeSumMultiplied(inputs: data, sumValue: 2020) {
             return "\(result)"
         } else {
             return "ERROR"
         }
-    }
-    
-    public init() {
     }
     
     func twoSumMultiplied(inputs: [Int], sumValue: Int, alreadySorted: Bool = false) -> Int? {

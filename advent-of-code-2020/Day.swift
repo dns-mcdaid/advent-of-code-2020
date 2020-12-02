@@ -1,3 +1,10 @@
+//
+//  Day.swift
+//  advent-of-code-2020
+//
+//  Created by Dennis McDaid on 12/1/20.
+//
+
 import Foundation
 
 public protocol Day {
@@ -10,7 +17,7 @@ public protocol Day {
 }
 
 extension Day {
-    public func run() {
+    func run() {
         let result01 = part01Result(input: data)
         let result02 = part02Result(input: data)
         print("Part 01: \(result01)")
