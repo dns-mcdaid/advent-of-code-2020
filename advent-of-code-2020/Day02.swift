@@ -13,7 +13,7 @@ struct Policy {
     let second: Int
 }
 
-public struct PasswordConfig {
+struct PasswordConfig {
     let password: String
     let policy: Policy
 }
@@ -24,49 +24,51 @@ let testData = [
     "2-9 c: ccccccccc"
 ]
 
-struct Day02: Day {
-    public typealias DataType = [PasswordConfig]
-    public var fileName: String = "input_02"
+let day02 = Day<[PasswordConfig]>(
+    input: "input_02",
+    transformer: dataMapper,
+    part01Result: part01Result,
+    part02Result: part02Result
+)
+
+private func part01Result(input: [PasswordConfig]) -> String {
+    let totalValid = input.filter { passwordIsValidByRange($0) }.count
+    return "\(totalValid)"
+}
+
+private func part02Result(input: [PasswordConfig]) -> String {
+    let totalValid = input.filter { passwordIsValidByIndex($0) }.count
+    return "\(totalValid)"
+}
+
+private func passwordIsValidByRange(_ config: PasswordConfig) -> Bool {
+    let min = config.policy.first
+    let max = config.policy.second
+    let instances = Array(config.password).filter {
+        $0 == config.policy.char
+    }.count
+    return instances >= min && instances <= max
+}
+
+private func passwordIsValidByIndex(_ config: PasswordConfig) -> Bool {
+    // Offset because password character indicies start at 1 for this problem.
+    let firstIndex = config.policy.first - 1
+    let secondIndex = config.policy.second - 1
     
-    public var data: [PasswordConfig] {
-        parseFileLines(fileName: fileName)
-            .map { $0.toPasswordConfig() }
-    }
+    let firstChar = config.password.charAt(firstIndex)
+    let secondChar = config.password.charAt(secondIndex)
     
-    func part01Result(input: [PasswordConfig]) -> String {
-        let totalValid = data.filter { passwordIsValidByRange($0) }.count
-        return "\(totalValid)"
-    }
+    let firstMatch = firstChar == config.policy.char
+    let secondMatch = secondChar == config.policy.char
     
-    func part02Result(input: [PasswordConfig]) -> String {
-        let totalValid = data.filter { passwordIsValidByIndex($0) }.count
-        return "\(totalValid)"
-    }
+    let uniqueMatch = firstMatch != secondMatch
     
-    func passwordIsValidByRange(_ config: PasswordConfig) -> Bool {
-        let min = config.policy.first
-        let max = config.policy.second
-        let instances = Array(config.password).filter {
-            $0 == config.policy.char
-        }.count
-        return instances >= min && instances <= max
-    }
-    
-    func passwordIsValidByIndex(_ config: PasswordConfig) -> Bool {
-        // Offset because password character indicies start at 1 for this problem.
-        let firstIndex = config.policy.first - 1
-        let secondIndex = config.policy.second - 1
-        
-        let firstChar = config.password.charAt(firstIndex)
-        let secondChar = config.password.charAt(secondIndex)
-        
-        let firstMatch = firstChar == config.policy.char
-        let secondMatch = secondChar == config.policy.char
-        
-        let uniqueMatch = firstMatch != secondMatch
-        
-        return uniqueMatch
-    }
+    return uniqueMatch
+}
+
+private func dataMapper(fileName: String) -> [PasswordConfig] {
+    return parseFileLines(fileName: fileName)
+        .map { $0.toPasswordConfig() }
 }
 
 private extension String {

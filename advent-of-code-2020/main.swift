@@ -7,4 +7,4 @@
 
 import Foundation
 
-Day03().run()
+day04.run()

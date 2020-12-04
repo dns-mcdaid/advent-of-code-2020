@@ -7,19 +7,16 @@
 
 import Foundation
 
-public protocol Day {
-    var fileName: String { get }
-    associatedtype DataType
-    var data: DataType { get }
+struct Day<T> {
+    let input: String
+    let transformer: (String) -> T
+    let part01Result: (T) -> String
+    let part02Result: (T) -> String
     
-    func part01Result(input: DataType) -> String
-    func part02Result(input: DataType) -> String
-}
-
-extension Day {
     func run() {
-        let result01 = part01Result(input: data)
-        let result02 = part02Result(input: data)
+        let data = transformer(input)
+        let result01 = part01Result(data)
+        let result02 = part02Result(data)
         print("Part 01: \(result01)")
         print("Part 02: \(result02)")
     }

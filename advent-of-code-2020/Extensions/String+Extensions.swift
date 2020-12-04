@@ -8,16 +8,16 @@
 import Foundation
 
 extension String {
-    func splitTrimming(separator: Character) -> [String] {
-        return split(separator: separator).map {
+    func splitTrimming(separator: Character, omittingEmptySubsequences: Bool = true) -> [String] {
+        return split(separator: separator, omittingEmptySubsequences: omittingEmptySubsequences).map {
             String($0.trimmingCharacters(in: .whitespacesAndNewlines))
 
         }
     }
     
-    func lines() -> [String] {
+    func lines(omittingEmptySubsequences: Bool = true) -> [String] {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
-            .splitTrimming(separator: "\n")
+            .splitTrimming(separator: "\n", omittingEmptySubsequences: omittingEmptySubsequences)
     }
     
     func charAt(_ index: Int) -> Character {
@@ -27,6 +27,11 @@ extension String {
     func charAtOrNull(_ index: Int) -> Character? {
         let arr = Array(self)
         return arr.indices.contains(index) ? arr[index] : nil
+    }
+    
+    func matchesRegex(pattern: String) -> Bool {
+        let regex = try! NSRegularExpression(pattern: pattern)
+        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count)) != nil
     }
 }
 

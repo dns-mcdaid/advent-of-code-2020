@@ -7,7 +7,7 @@
 
 import Foundation
 
-public func parseIntList(fileName: String) -> [Int] {
+func parseIntList(fileName: String) -> [Int] {
     do {
         let fileStr = try parseFileContents(fileName: fileName)
         return convertStringToListOfInts(fileStr)
@@ -18,10 +18,10 @@ public func parseIntList(fileName: String) -> [Int] {
     return []
 }
 
-public func parseFileLines(fileName: String) -> [String] {
+func parseFileLines(fileName: String, omittingEmptySubsequences: Bool = true) -> [String] {
     do {
         let fileStr = try parseFileContents(fileName: fileName)
-        return fileStr.lines()
+        return fileStr.lines(omittingEmptySubsequences: omittingEmptySubsequences)
     } catch {
         print("Error getting lines from file \(fileName)")
         print(error)
