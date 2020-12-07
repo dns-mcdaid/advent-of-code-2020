@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241C5ED4257DEF3C0059E2E6 /* Day05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C5ED3257DEF3C0059E2E6 /* Day05.swift */; };
+		241C5ED7257DEF6A0059E2E6 /* input_05.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 241C5ED6257DEF640059E2E6 /* input_05.txt */; };
 		2496C05D2578AAD30018B9B1 /* input_01.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2496C05C2578AABE0018B9B1 /* input_01.txt */; };
 		2496C05F2578AAD70018B9B1 /* input_02.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2496C05B2578AAB70018B9B1 /* input_02.txt */; };
 		2496C0612578AADC0018B9B1 /* input_03.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2496C05A2578AAAD0018B9B1 /* input_03.txt */; };
@@ -29,6 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				241C5ED7257DEF6A0059E2E6 /* input_05.txt in CopyFiles */,
 				2496C06B2579FC220018B9B1 /* input_04.txt in CopyFiles */,
 				2496C0612578AADC0018B9B1 /* input_03.txt in CopyFiles */,
 				2496C05F2578AAD70018B9B1 /* input_02.txt in CopyFiles */,
@@ -39,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		241C5ED3257DEF3C0059E2E6 /* Day05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day05.swift; sourceTree = "<group>"; };
+		241C5ED6257DEF640059E2E6 /* input_05.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input_05.txt; sourceTree = "<group>"; };
 		2496C05A2578AAAD0018B9B1 /* input_03.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input_03.txt; sourceTree = "<group>"; };
 		2496C05B2578AAB70018B9B1 /* input_02.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input_02.txt; sourceTree = "<group>"; };
 		2496C05C2578AABE0018B9B1 /* input_01.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input_01.txt; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 				24EE74F925776C8D00CF7BD7 /* Day02.swift */,
 				2496C0632578AAFB0018B9B1 /* Day03.swift */,
 				2496C0672579FB250018B9B1 /* Day04.swift */,
+				241C5ED3257DEF3C0059E2E6 /* Day05.swift */,
 			);
 			path = "advent-of-code-2020";
 			sourceTree = "<group>";
@@ -105,6 +111,7 @@
 				2496C05B2578AAB70018B9B1 /* input_02.txt */,
 				2496C05A2578AAAD0018B9B1 /* input_03.txt */,
 				2496C0662579FB160018B9B1 /* input_04.txt */,
+				241C5ED6257DEF640059E2E6 /* input_05.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 				24EE74F125776C3400CF7BD7 /* Day.swift in Sources */,
 				24EE74F725776C7900CF7BD7 /* Day01.swift in Sources */,
 				24EE74FA25776C8D00CF7BD7 /* Day02.swift in Sources */,
+				241C5ED4257DEF3C0059E2E6 /* Day05.swift in Sources */,
 				24EE74E825776BD400CF7BD7 /* main.swift in Sources */,
 				24EE74F425776C5300CF7BD7 /* Parser.swift in Sources */,
 				2496C0642578AAFB0018B9B1 /* Day03.swift in Sources */,
