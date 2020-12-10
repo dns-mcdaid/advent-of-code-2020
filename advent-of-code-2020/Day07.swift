@@ -22,7 +22,7 @@ struct BagConfig {
     var children: [String:Int] = [String:Int]()
 }
 
-func solveDay07Part01(_ bagLookup: [String: BagConfig]) -> String {
+private func solveDay07Part01(_ bagLookup: [String: BagConfig]) -> String {
     let bagImSearchingFor = "shiny gold"
     guard let shinyGold = bagLookup[bagImSearchingFor] else {
         return "Something went wrong"

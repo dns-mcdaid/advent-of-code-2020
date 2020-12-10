@@ -21,6 +21,8 @@
 		2496C0642578AAFB0018B9B1 /* Day03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2496C0632578AAFB0018B9B1 /* Day03.swift */; };
 		2496C0682579FB250018B9B1 /* Day04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2496C0672579FB250018B9B1 /* Day04.swift */; };
 		2496C06B2579FC220018B9B1 /* input_04.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2496C0662579FB160018B9B1 /* input_04.txt */; };
+		24DB8A8D2581D68600067BEA /* Day09.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB8A8C2581D68600067BEA /* Day09.swift */; };
+		24DB8A912581D8F300067BEA /* input_09.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24DB8A8F2581D6A900067BEA /* input_09.txt */; };
 		24EE74E825776BD400CF7BD7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE74E725776BD400CF7BD7 /* main.swift */; };
 		24EE74F125776C3400CF7BD7 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE74F025776C3400CF7BD7 /* Day.swift */; };
 		24EE74F425776C5300CF7BD7 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE74F325776C5300CF7BD7 /* Parser.swift */; };
@@ -37,6 +39,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				24DB8A912581D8F300067BEA /* input_09.txt in CopyFiles */,
 				24797F6B2581942000003A0F /* input_08.txt in CopyFiles */,
 				241C5EE1257E03EF0059E2E6 /* input_07.txt in CopyFiles */,
 				241C5EDE257DFD590059E2E6 /* input_06.txt in CopyFiles */,
@@ -65,6 +68,8 @@
 		2496C0632578AAFB0018B9B1 /* Day03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day03.swift; sourceTree = "<group>"; };
 		2496C0662579FB160018B9B1 /* input_04.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input_04.txt; sourceTree = "<group>"; };
 		2496C0672579FB250018B9B1 /* Day04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day04.swift; sourceTree = "<group>"; };
+		24DB8A8C2581D68600067BEA /* Day09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day09.swift; sourceTree = "<group>"; };
+		24DB8A8F2581D6A900067BEA /* input_09.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input_09.txt; sourceTree = "<group>"; };
 		24EE74E425776BD400CF7BD7 /* advent-of-code-2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "advent-of-code-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EE74E725776BD400CF7BD7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24EE74F025776C3400CF7BD7 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 				241C5ED9257DF8C80059E2E6 /* Day06.swift */,
 				241C5EE3257E03FB0059E2E6 /* Day07.swift */,
 				24797F66258190E500003A0F /* Day08.swift */,
+				24DB8A8C2581D68600067BEA /* Day09.swift */,
 			);
 			path = "advent-of-code-2020";
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 				241C5EDD257DFD510059E2E6 /* input_06.txt */,
 				241C5EE0257E03E70059E2E6 /* input_07.txt */,
 				24797F6A2581941C00003A0F /* input_08.txt */,
+				24DB8A8F2581D6A900067BEA /* input_09.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24EE7510257771C700CF7BD7 /* Collection+Extensions.swift in Sources */,
+				24DB8A8D2581D68600067BEA /* Day09.swift in Sources */,
 				24EE7515257772AA00CF7BD7 /* String+Extensions.swift in Sources */,
 				24EE74F125776C3400CF7BD7 /* Day.swift in Sources */,
 				24EE74F725776C7900CF7BD7 /* Day01.swift in Sources */,
