@@ -54,7 +54,7 @@ private func writeDownResponses(_ fileName: String) -> [[String]] {
     var passengerResponses: [[String]] = []
     var activeGroup: [String] = []
     
-    for line in allData {
+    for line in day07TestData {
         if line.isEmpty {
             passengerResponses.append(activeGroup)
             activeGroup.removeAll()
@@ -66,7 +66,7 @@ private func writeDownResponses(_ fileName: String) -> [[String]] {
     return passengerResponses
 }
 
-private let testData = [
+private let day06TestData = [
     "abc",
     "",
     "a",

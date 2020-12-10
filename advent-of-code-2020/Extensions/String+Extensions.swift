@@ -8,6 +8,12 @@
 import Foundation
 
 extension String {
+    func splitTrimming(separator: String) -> [String] {
+        return components(separatedBy: separator).map {
+            $0.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+    }
+    
     func splitTrimming(separator: Character, omittingEmptySubsequences: Bool = true) -> [String] {
         return split(separator: separator, omittingEmptySubsequences: omittingEmptySubsequences).map {
             String($0.trimmingCharacters(in: .whitespacesAndNewlines))
