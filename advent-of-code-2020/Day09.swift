@@ -20,7 +20,6 @@ private func solvePart1(_ numbers: [Int]) -> String {
     return "\(findFirstNonMatch(numbers))"
 }
 
-private func findContiguous
 
 private func findFirstNonMatch(_ numbers: [Int], _ preambleSize: Int = 25) -> Int {
     var back = 0
